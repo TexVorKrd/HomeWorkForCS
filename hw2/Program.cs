@@ -96,5 +96,27 @@ while (qestion.ToLower()=="y"){
     Console.Clear();
 }
 
+//Реализация через Массив
+string[] day =new string[7];
+for (int i=0;i<day.Length;i++){
+    if(i<6){
+        day[i]="Рабочий";
+    }else{
+        day[i]="Выходной";
+    }
+}
+qestion="Y";
+while (qestion.ToLower()=="y"){
+    Console.Write("Введите день недели ");
+    a=Convert.ToInt32(Console.ReadLine());
+    if(a<1||a>7){
+        Console.WriteLine($"Нет дня недели с номером \"{a}\" "); 
+    }else{      
+            Console.WriteLine(day[a]);
+    }    
+    Console.Write("Для ввода новых чисел введите - Y  ");
+    qestion=Console.ReadLine();
+    Console.Clear();
+}
 
 
