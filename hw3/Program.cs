@@ -63,6 +63,7 @@ while (qestion.ToLower()=="y"){
     Console.Write($"Растояние между точками А({coord[0,0]},{coord[0,1]},{coord[0,2]}) и В({coord[1,0]},{coord[1,1]},{coord[1,2]}) равно");
     Console.WriteLine($" {Convert.ToInt32(rangeAB*100)/100}.{Convert.ToInt32(rangeAB*100)%100}");
     Console.Write("Для ввода новых чисел введите - Y  ");
+    
     qestion=Console.ReadLine();
     Console.Clear();
 }
@@ -74,7 +75,6 @@ Console.WriteLine("Напишите программу, которая прин�
 
 qestion="Y";
 while (qestion.ToLower()=="y"){
-    int[,] coord = new int[2,3];    
     Console.WriteLine("Число А");
     a=Convert.ToInt64(Console.ReadLine());
     for (int i=0;i<=a;i++){
