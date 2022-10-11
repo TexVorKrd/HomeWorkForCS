@@ -37,7 +37,7 @@ qestion="Y";
 while (qestion.ToLower()=="y"){
 
 //---------[Начало решения]    
-    Console.WriteLine($"\nСумма элементов на нечетных местах {sumElementsOnEvenPosition(genRandomArray(1,1000))}");
+    Console.WriteLine($"\nСумма элементов на нечетных местах {sumElementsOnEvenPosition(genRandomArray(-1000,1000))}");
 //---------[Конец решения]            
         
     Console.Write("Для ввода новых чисел введите - Y  ");
