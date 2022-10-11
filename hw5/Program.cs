@@ -67,7 +67,7 @@ int[] genRandomArray(int from,int to){
         Random rnd = new Random();
         int[] myArray = new int[rnd.Next(1,50)];
         for (int i=0;i<myArray.Length;i++){
-        myArray[i]=rnd.Next(-1000,1000);
+        myArray[i]=rnd.Next(from,to);
         Console.Write($"{myArray[i]} ");        
     }
     return myArray;
