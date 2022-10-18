@@ -71,7 +71,7 @@ while (qestion.ToLower()=="y"){
 //---------[Начало решения]    
     int[,] myArray = generateIntArray(rnd.Next(1,10),rnd.Next(1,10));
     printIntAray(myArray);
-    printSumByCol(myArray);
+    printMidByCol(myArray);
 //---------[Конец решения]            
         
     Console.Write("Для ввода новых чисел введите - Y  ");
@@ -118,7 +118,7 @@ void printAray(double[,] dArray){
         Console.Write("[");
         for(int j=0;j<dArray.GetLength(1);j++){
             Console.Write($"{dArray[i,j]}");
-            if(j!=dArray.GetLength(1)-1) Console.Write(",");
+            if(j!=dArray.GetLength(1)-1) Console.Write(";");
         }
         Console.WriteLine("]");
     }
@@ -132,19 +132,22 @@ void printIntAray(int[,] dArray){
         Console.Write("[");
         for(int j=0;j<dArray.GetLength(1);j++){
             Console.Write($"{dArray[i,j]}");
-            if(j!=dArray.GetLength(1)-1) Console.Write(",");
+            if(j!=dArray.GetLength(1)-1) Console.Write(";");
         }
         Console.WriteLine("]");
     }
 }
 
-void printSumByCol(int[,] myArray){
-    int[,] sumCols= new int[1,myArray.GetLength(1)];
+
+void printMidByCol(int[,] myArray){
+    double[,] sumCols= new double[1,myArray.GetLength(1)];
     for (int j=0;j<myArray.GetLength(1);j++){        
         for (int i=0;i<myArray.GetLength(0);i++){
             sumCols[0,j]+=myArray[i,j];
         }
+        sumCols[0,j]=(sumCols[0,j]/myArray.GetLength(1));
+
     }
     Console.WriteLine("--------------------");
-    printIntAray(sumCols);
+    printAray(sumCols);
 }
